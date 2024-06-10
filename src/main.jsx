@@ -6,6 +6,7 @@ import './index.css'
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import Signin from './pages/Signin.jsx';
 import EditProfile from './pages/EditProfile.jsx';
+import MintNFT from './pages/MintNFT.jsx';
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
             element: <EditProfile/>
           }
         ]
+      },
+      {
+        path: "mint-nft",
+        element: <MintNFT/>
       }
     ]
   },
