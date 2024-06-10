@@ -17,6 +17,7 @@ This is a hybrid system NFT marketplace built using React, ethers.js, Firebase, 
 - React: A popular JavaScript library for building user interfaces.
 - ethers.js: A powerful library for interacting with the Ethereum blockchain.
 - Infura: A service that provides access to the Ethereum network.
+- Firebase: A comprehensive platform for storing data.
 
 ## Contributing
 
