@@ -13,7 +13,8 @@ export default function Header() {
                         <Nav.Link href="/explore" active>Explore</Nav.Link>
                         <Navbar.Text><Button variant="light">Connect Wallet</Button></Navbar.Text>
                         <NavDropdown title={<PersonCircle/>} style={{fontSize: 22, marginLeft: 8}}>
-
+                            <NavDropdown.Item href="/profile/edit">Edit profile</NavDropdown.Item>
+                            <NavDropdown.Item href="/">Sign out</NavDropdown.Item>
                         </NavDropdown>
                     </Nav>
                 </Navbar.Collapse>

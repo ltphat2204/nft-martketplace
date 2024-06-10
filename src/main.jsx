@@ -5,11 +5,23 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css'
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import Signin from './pages/Signin.jsx';
+import EditProfile from './pages/EditProfile.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App/>,
+    children: [
+      {
+        path: "profile",
+        children: [
+          {
+            path: "edit",
+            element: <EditProfile/>
+          }
+        ]
+      }
+    ]
   },
   {
     path: "/auth",
