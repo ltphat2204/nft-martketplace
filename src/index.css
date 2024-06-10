@@ -2,3 +2,7 @@
     display: flex;
     align-items: center;
 }
+
+body {
+    background-color: #323234 !important;
+}
