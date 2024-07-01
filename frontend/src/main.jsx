@@ -7,12 +7,29 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import Signin from './pages/Signin.jsx';
 import EditProfile from './pages/EditProfile.jsx';
 import MintNFT from './pages/MintNFT.jsx';
+import Home from './pages/Home.jsx';
+import Explore from './pages/Explore.jsx';
+import DetailsNFT from './pages/DetailsNFT.jsx';
+import Wallet from './pages/Wallet.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App/>,
     children: [
+      {
+        index: true,
+        path: "/",
+        element: <Home />,
+      },
+      {
+        path: "explore",
+        element: <Explore />,
+      },
+      {
+        path: "details-nft/:nftId",
+        element: <DetailsNFT />,
+      },
       {
         path: "profile",
         children: [
@@ -25,6 +42,10 @@ const router = createBrowserRouter([
       {
         path: "mint-nft",
         element: <MintNFT/>
+      },
+      {
+        path: "wallet",
+        element: <Wallet />
       }
     ]
   },
