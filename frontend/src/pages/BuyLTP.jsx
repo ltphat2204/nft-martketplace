@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import '../styles/BuyLTP.css';
 import { Modal, Button, Form } from 'react-bootstrap';
 import { web3, ltpContract } from '../contract-api/web3'; // Adjust the import path as necessary
@@ -19,6 +19,8 @@ const BuyLTP = ({ show, handleClose, refreshBalances }) => {
             try {
                 await window.ethereum.request({ method: 'eth_requestAccounts' });
                 const accounts = await web3.eth.getAccounts();
+                
+                console.log(accounts[0])
                 const account = accounts[0];
                 const balance = await web3.eth.getBalance(account);
                 const ethBalance = web3.utils.fromWei(balance, 'ether');
